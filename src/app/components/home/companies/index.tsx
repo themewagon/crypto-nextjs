@@ -1,27 +1,11 @@
-'use client'
-import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-import Slider from 'react-slick'
+"use client";
+import { Companiesdata } from "@/lib/data/pageData";
+import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
 const Companies = () => {
-  const [companiesData, setCompaniesData] = useState<{ imgSrc: string }[]>([])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch('/api/page-data')
-        if (!res.ok) throw new Error('Failed to fetch')
-        const data = await res.json()
-        setCompaniesData(data?.Companiesdata)
-      } catch (error) {
-        console.error('Error fetching services:', error)
-      }
-    }
-    fetchData()
-  }, [])
-
   const settings = {
     dots: false,
     infinite: true,
@@ -29,7 +13,7 @@ const Companies = () => {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    cssEase: 'linear',
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
@@ -50,21 +34,21 @@ const Companies = () => {
         },
       },
     ],
-  }
+  };
 
   return (
-    <section className='border-none -my-2 pt-0'>
-      <div className='container'>
+    <section className="border-none -my-2 pt-0">
+      <div className="container">
         <div>
           <Slider {...settings}>
-            {companiesData?.map((item: any, i: any) => (
+            {Companiesdata?.map((item: any, i: any) => (
               <div key={i}>
                 <Image
                   src={item.imgSrc}
                   alt={item.imgSrc}
                   width={203}
                   height={101}
-                  className='w-auto'
+                  className="w-auto"
                 />
               </div>
             ))}
@@ -72,7 +56,7 @@ const Companies = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Companies
+export default Companies;
