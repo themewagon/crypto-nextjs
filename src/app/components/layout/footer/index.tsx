@@ -25,7 +25,13 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               {Sociallinkdata.map((items, i) => (
-                <Link href={items.href} key={i}>
+                <Link
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
+                  href={"#!"}
+                  key={i}
+                >
                   <img
                     src={items.imgsrc}
                     alt={items.imgsrc}

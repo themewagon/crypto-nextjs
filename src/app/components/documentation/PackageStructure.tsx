@@ -6,7 +6,10 @@ export const PackageStructure = () => {
     21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
   ];
   return (
-    <div id="structure" className="md:scroll-m-[130px] scroll-m-28 relative z-10 before:absolute before:w-1/2 before:h-1/2 before:bg-linear-to-br before:from-primary before:to-secondary before:blur-390 before:z-0 before:-left-36">
+    <div
+      id="structure"
+      className="md:scroll-m-[130px] scroll-m-28 relative z-10 before:absolute before:w-1/2 before:h-1/2 before:bg-linear-to-br before:from-primary before:to-secondary before:blur-390 before:z-0 before:-left-36"
+    >
       <div className="relative z-10">
         <h3 className="text-2xl font-semibold mt-8 text-white">
           Pacakge Structure
@@ -71,8 +74,12 @@ export const PackageStructure = () => {
                           </div>
                           <div className="flex">
                             <div className="flex flex-col justify-between gap-2 mt-2">
-                              {Counts.slice(0, 22).map((item) => {
-                                return <p className="text-xl text-white">|</p>;
+                              {Counts.slice(0, 22).map((item, index) => {
+                                return (
+                                  <p key={index} className="text-xl text-white">
+                                    |
+                                  </p>
+                                );
                               })}
                             </div>
                             <ul className="ps-5 md:ps-12 list-unstyled">
@@ -89,9 +96,14 @@ export const PackageStructure = () => {
                                 </div>
                                 <div className="flex">
                                   <div className="flex flex-col justify-between gap-2 mt-2">
-                                    {Counts.slice(0, 16).map((item) => {
+                                    {Counts.slice(0, 16).map((item, index) => {
                                       return (
-                                        <p className="text-xl text-white">|</p>
+                                        <p
+                                          key={index}
+                                          className="text-xl text-white"
+                                        >
+                                          |
+                                        </p>
                                       );
                                     })}
                                   </div>
@@ -143,9 +155,12 @@ export const PackageStructure = () => {
                                             <div className="flex">
                                               <div className="flex flex-col justify-between gap-1 mt-2">
                                                 {Counts.slice(0, 2).map(
-                                                  (item) => {
+                                                  (item, index) => {
                                                     return (
-                                                      <p className="text-xl text-white">
+                                                      <p
+                                                        key={index}
+                                                        className="text-xl text-white"
+                                                      >
                                                         |
                                                       </p>
                                                     );
@@ -224,13 +239,18 @@ export const PackageStructure = () => {
                                       </div>
                                       <div className="flex">
                                         <div className="flex flex-col justify-between gap-2 mt-2">
-                                          {Counts.slice(0, 2).map((item) => {
-                                            return (
-                                              <p className="text-xl text-white">
-                                                |
-                                              </p>
-                                            );
-                                          })}
+                                          {Counts.slice(0, 2).map(
+                                            (item, index) => {
+                                              return (
+                                                <p
+                                                  key={index}
+                                                  className="text-xl text-white"
+                                                >
+                                                  |
+                                                </p>
+                                              );
+                                            }
+                                          )}
                                         </div>
                                         <ul className="ps-5 md:ps-12 list-unstyled">
                                           <li className="py-2">
@@ -287,13 +307,18 @@ export const PackageStructure = () => {
                                       </div>
                                       <div className="flex">
                                         <div className="flex flex-col justify-between gap-2 mt-2">
-                                          {Counts.slice(0, 1).map((item) => {
-                                            return (
-                                              <p className="text-xl text-white">
-                                                |
-                                              </p>
-                                            );
-                                          })}
+                                          {Counts.slice(0, 1).map(
+                                            (item, index) => {
+                                              return (
+                                                <p
+                                                  key={index}
+                                                  className="text-xl text-white"
+                                                >
+                                                  |
+                                                </p>
+                                              );
+                                            }
+                                          )}
                                         </div>
                                         <ul className="ps-5 md:ps-12 list-unstyled">
                                           <li className="py-2">
