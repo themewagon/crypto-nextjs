@@ -1,6 +1,7 @@
 "use client";
 
 import { Footerlinkdata, Sociallinkdata } from "@/lib/data/pageData";
+import { getImagePath } from "@/lib/utils/imagePath";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,7 +14,7 @@ const Footer = () => {
           <div className="lg:col-span-6 sm:col-span-2">
             <img
               className="block h-12 w-20px mb-4"
-              src={"/images/logo/logo.svg"}
+              src={getImagePath("/images/logo/logo.svg")}
               alt="Crypto-Logo"
             />
             <p className="text-white/60 text-sm font-normal max-w-96 leading-7 mb-7">
@@ -56,7 +57,7 @@ const Footer = () => {
               className="text-white/60 hover:text-primary text-sm font-normal mb-6 flex gap-2 w-fit"
             >
               <Image
-                src={"/images/footer/number.svg"}
+                src={getImagePath("/images/footer/number.svg")}
                 alt="number-icon"
                 width={20}
                 height={20}
@@ -68,7 +69,7 @@ const Footer = () => {
               className="text-white/60 hover:text-primary text-sm font-normal mb-6 flex gap-2 w-fit"
             >
               <Image
-                src={"/images/footer/email.svg"}
+                src={getImagePath("/images/footer/email.svg")}
                 alt="email-icon"
                 width={20}
                 height={20}
@@ -77,7 +78,7 @@ const Footer = () => {
             </Link>
             <div className="text-white/60 text-sm font-normal mb-6 flex gap-2">
               <Image
-                src={"/images/footer/address.svg"}
+                src={getImagePath("/images/footer/address.svg")}
                 alt="address-icon"
                 width={20}
                 height={20}

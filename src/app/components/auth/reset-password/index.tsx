@@ -1,10 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { getImagePath } from "@/lib/utils/imagePath";
 import axios from "axios";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import Loader from "../../shared/Loader";
 
 const ResetPassword = ({ token }: { token: string }) => {
@@ -89,14 +90,14 @@ const ResetPassword = ({ token }: { token: string }) => {
               <div className="mb-10 text-center">
                 <Link href="/" className="mx-auto inline-block max-w-[160px]">
                   <Image
-                    src="/images/logo/logo.svg"
+                    src={getImagePath("/images/logo/logo.svg")}
                     alt="logo"
                     width={140}
                     height={30}
                     className="dark:hidden"
                   />
                   <Image
-                    src="/images/logo/logo-white.svg"
+                    src={getImagePath("/images/logo/logo-white.svg")}
                     alt="logo"
                     width={140}
                     height={30}
