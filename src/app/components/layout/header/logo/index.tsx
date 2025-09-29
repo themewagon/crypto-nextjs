@@ -1,3 +1,4 @@
+import { getImagePath } from "@/lib/utils/imagePath";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,7 +6,7 @@ const Logo: React.FC = () => {
   return (
     <Link href="/">
       <Image
-        src="/images/logo/logo.svg"
+        src={getImagePath("/images/logo/logo.svg")}
         alt="logo"
         width={160}
         height={50}

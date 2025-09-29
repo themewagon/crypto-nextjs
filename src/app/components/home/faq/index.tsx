@@ -1,5 +1,6 @@
 "use client";
 import { Faqdata } from "@/lib/data/pageData";
+import { getImagePath } from "@/lib/utils/imagePath";
 import {
   Disclosure,
   DisclosureButton,
@@ -53,7 +54,7 @@ const Faq = () => {
             </div>
             <div className="-m-48 absolute -right-32">
               <Image
-                src={"/images/faq/faq.svg"}
+                src={getImagePath("/images/faq/faq.svg")}
                 alt="faq-image"
                 width={941}
                 height={379}

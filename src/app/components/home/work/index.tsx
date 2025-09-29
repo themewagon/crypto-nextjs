@@ -1,5 +1,6 @@
 "use client";
 import { workdata } from "@/lib/data/pageData";
+import { getImagePath } from "@/lib/utils/imagePath";
 import Image from "next/image";
 
 const Work = () => {
@@ -32,7 +33,7 @@ const Work = () => {
               </div>
               <div>
                 <Image
-                  src={"/images/icons/bg-arrow.svg"}
+                  src={getImagePath("/images/icons/bg-arrow.svg")}
                   alt="arrow-bg"
                   width={85}
                   height={35}
