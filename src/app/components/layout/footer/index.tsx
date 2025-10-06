@@ -104,6 +104,14 @@ const Footer = () => {
           >
             {" "}
             GetNextJs Templates.com
+          </Link>{" "}
+          • Distributed by{" "}
+          <Link
+            href="https://themewagon.com/"
+            target="_blank"
+            className="hover:text-primary"
+          >
+            ThemeWagon
           </Link>
         </p>
       </div>
